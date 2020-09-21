@@ -1,27 +1,25 @@
 package org.matrix.spring.aop.operation;
 
-import org.matrix.spring.aop.upgrade.Access;
-import org.matrix.spring.aop.upgrade.Hock;
-import org.matrix.spring.aop.upgrade.HockParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-@Hock
-public class UserService {
+public class UserDaoImpl implements UserDao{
 
     @Autowired
     AccessHock accessHock;
 
-    @Access
+    // @Access
+    @Override
     public void delete(int id) {
         //accessHock.access();
         System.err.println("当前删除用户编号为：" + id);
         System.err.println("删除成功！");
     }
 
-    @Access
-    public void add(@HockParam int id) {
+    // @Access
+    @Override
+    public void add(int id) {
         //accessHock.access();
         System.err.println("当前添加用户编号为：" + id);
         System.err.println("添加成功！");
