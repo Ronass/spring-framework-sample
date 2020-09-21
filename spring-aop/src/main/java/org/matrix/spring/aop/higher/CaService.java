@@ -23,4 +23,8 @@ public class CaService {
         System.err.println("白盒名称生成中...：" + no);
     }
 
+    public void exception1(int no){
+        throw new RuntimeException("我是异常:" + no);
+    }
+
 }

@@ -22,7 +22,8 @@ class SpringAopApplicationOtherTests {
         // System.err.println(subService.name("乾隆"));
         // System.err.println(subService.name("康熙",1));
         // caService.hiker("雍正",1);
-        caService.exception(1);
+        // caService.exception(1);
+        caService.exception1(22);
         // userDao.delete(1);
         // cacheDaoImpl.delete(1);
     }

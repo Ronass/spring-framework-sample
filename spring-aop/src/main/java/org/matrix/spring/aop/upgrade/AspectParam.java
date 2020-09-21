@@ -39,7 +39,7 @@ public class AspectParam {
     public void match4() {
     }
 
-    @Before("match2()")
+    @Before("match3()")
     public void beforeExe() {
         System.err.println("经济处介入开始检查！");
         accessHock.access();

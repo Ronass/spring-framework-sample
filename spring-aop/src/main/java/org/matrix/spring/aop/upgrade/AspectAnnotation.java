@@ -1,8 +1,6 @@
 package org.matrix.spring.aop.upgrade;
 
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.matrix.spring.aop.operation.AccessHock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -44,4 +42,11 @@ public class AspectAnnotation {
         System.err.println("密探介入开始检查！");
         accessHock.access();
     }
+
+    @After("match2()")
+    public void after() {
+        System.err.println("密探介入检查完成！");
+    }
+
+
 }
